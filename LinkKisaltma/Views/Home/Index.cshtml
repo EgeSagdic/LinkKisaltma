@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8" style="margin-top:20%;">
+
+                <form action="/Home/Index" method="post">
+
+                    <input type="text" placeholder="Kısaltılacak Link'i Yazınız" class="form-control" name="UserLink" style="margin-bottom:15px" />
+
+                    <button type="submit" class="btn btn-primary"> Oluştur</button>
+
+                </form>
+
+                @if (ViewBag.Mesaj != null)
+                {
+                    <div class="alert alert-success" style="margin-top:25px;">@ViewBag.Mesaj</div>
+                }
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+ 
+
+</body>
+</html>
